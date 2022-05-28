@@ -6,8 +6,16 @@
     </head>
     <body>
         <h1>出席確認</h1>
-        <button id="attend" onclick="attend()">出席する</button>
-        <button id="exit" onclick="exit()">退出する</button>
+        <div id="text">
+            <h3>あなたの情報</h3>
+            <p>会員番号：<%= id %></p>
+            <p>名前：<%= name %></p>
+        </div>
+        <button id="attend">出席する</button>
+        <button id="exit">退出する</button><br>
+        <button id="logout">ログアウト</button>
+        <button id="edit">名前の変更</button>
+        <div id="edit_text"></div>
         <h2>出席者</h2>
         <ul id="attend_list"></ul>
         <script src="./attendance.js"></script>

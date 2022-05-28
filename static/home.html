@@ -5,17 +5,6 @@
         <title>出席確認</title>
     </head>
     <body>
-        <script>
-            console.log(!localStorage.getItem("info"))
-            if(!localStorage.getItem("info")){
-                ;
-            }else{
-                const menber = JSON.parse(localStorage.getItem("info"));
-                const name = menber.name;
-                const number = menber.id;
-                location = `/start?name=${name}&number=${number}`;
-            }
-        </script>
         <h1>出席確認</h1>
         <form action="/start">
             会員番号を入力してください(半角数字)<input name="number"><br>
