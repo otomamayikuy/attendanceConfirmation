@@ -24,7 +24,7 @@ app.get("/menbers_number", (request, response) => {
 //名前とIDを登録する
 app.get("/register", (request, response) => {
   const name = request.query.name;
-  menbers.push({name: name, id: String(menbers_number), statas: "attendance"});
+  menbers.push({name: name, id: String(menbers_number), statas: "absence"});
   const template = fs.readFileSync("static/register.html", "utf-8");
   const html = ejs.render(template, {name:name});
   response.send(html);
