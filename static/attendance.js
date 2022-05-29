@@ -38,10 +38,12 @@ const attend = async () => {
 }
 
 const logout = async () => {
-    const param = document.location.search;
-    const response = await fetch("/exit"+param);
-    alert("ログアウトしました");
-    location = "/home";
+    const result = confirm("ログアウトしますか");
+    if(result){
+        const param = document.location.search;
+        const response = await fetch("/exit"+param);
+        location = "/home";
+    }
 }
 
 function edit() {
